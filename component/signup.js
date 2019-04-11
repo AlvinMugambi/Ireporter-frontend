@@ -1,7 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 require('./index.css');
-import "../images/fist.jpeg";
 
 import { Form, Button, Image } from 'react-bootstrap'
 
@@ -110,16 +109,6 @@ class Signup extends React.Component{
         }
 
       }
-      else if (json.email) {
-        try {
-          var error = document.getElementById("email-error")
-          error.innerHTML = json.email[0]
-          error.style.color = "red"
-        } catch (e) {
-          console.log(e);
-        }
-
-      }
       else if (json.other_name) {
         try {
           var error = document.getElementById("other-name-error")
@@ -144,6 +133,16 @@ class Signup extends React.Component{
         try {
           var error = document.getElementById("phone-number-error")
           error.innerHTML = json.mobile_number[0]
+          error.style.color = "red"
+        } catch (e) {
+          console.log(e);
+        }
+
+      }
+      else if (json.email) {
+        try {
+          var error = document.getElementById("email-error")
+          error.innerHTML = json.email[0]
           error.style.color = "red"
         } catch (e) {
           console.log(e);

@@ -29,6 +29,9 @@ class Login extends React.Component{
 
     let { user_name, password } = this.state
 
+    document.getElementById("login-error").innerHTML = ""
+    document.getElementById('submit').innerHTML = "Loading..."
+
     fetch('https://ireporter-drf-api-staging.herokuapp.com/api/auth/login/', {
       method: 'POST',
       body: JSON.stringify({
@@ -43,6 +46,7 @@ class Login extends React.Component{
     .then(response => response.json())
     .then(json => {
       if (json.token){
+        localStorage.setItem('token', json.token);
         this.setState({'loggedin': true})
         localStorage.setItem('token', json.token)
         console.log(localStorage.getItem('token'))
@@ -54,11 +58,14 @@ class Login extends React.Component{
           var error = document.getElementById("login-error")
           error.innerHTML = json.message
           error.style.color = "red"
+          document.getElementById('submit').innerHTML = "Submit"
+
         } catch (e) {
           console.log(e);
         }
 
       }
+
       console.log(this.state);
       console.log(json.token);
       console.log(json);
@@ -91,7 +98,7 @@ class Login extends React.Component{
             <Form.Group controlId="formBasicChecbox">
               <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
-            <Button className="btn btn-success btn-block" variant="primary" type="submit">
+            <Button id="submit" className="btn btn-success btn-block" variant="primary" type="submit">
               Submit
             </Button>
             <p></p>
