@@ -106,6 +106,7 @@ class Interventions extends React.Component {
                     className="card-img-top"
                     src="../images/intervention.jpg"
                     alt=""
+                    fluid="true"
                   />
                   <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
