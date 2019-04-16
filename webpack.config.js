@@ -19,6 +19,7 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
+    contentBase: '/',
     historyApiFallback: true,
   },
   plugins: [
