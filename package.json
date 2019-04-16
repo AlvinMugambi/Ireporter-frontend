@@ -13,7 +13,7 @@
     ]
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
