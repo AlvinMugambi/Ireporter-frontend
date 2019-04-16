@@ -51,7 +51,7 @@ class Login extends React.Component{
         localStorage.setItem('token', json.token)
         console.log(localStorage.getItem('token'))
         console.log(this.props)
-        this.props.history.push('/signup')
+        this.props.history.push('/interventions')
       }
       else if (json.message) {
         try {

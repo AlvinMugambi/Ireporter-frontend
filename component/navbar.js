@@ -15,7 +15,7 @@ class Navbar extends React.Component{
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link active" href="/">Home <span className="sr-only">(current)</span></a>
+            <a className="nav-item nav-link active" href="/interventions">Home <span className="sr-only">(current)</span></a>
             <a className="nav-item nav-link" href="">About us</a>
             <a className="nav-item nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Contact us</a>
           </div>

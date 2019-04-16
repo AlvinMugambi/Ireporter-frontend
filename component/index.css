@@ -1,29 +1,74 @@
-.bg{
-  background-image: url('../images/bg.jpg') no-repeat;
+/* body{
+  background-color: #F0F0F0;
+}
+
+.container{
+  background-color: white;
+} */
+
+.bg {
+  background-image: url("../images/bg.jpg") no-repeat;
   image-resolution: from-image;
   width: 100%;
   height: 100vh;
 }
 
-.form-container{
+.form-container {
   border: 0px solid black;
   padding: 50px 60px;
   margin-top: 0;
-  -webkit-box-shadow: -1px 2px 19px 2px rgba(0,0,0,0.65);
-  -moz-box-shadow: -1px 2px 19px 2px rgba(0,0,0,0.65);
-  box-shadow: -1px 2px 19px 2px rgba(0,0,0,0.65);
+  -webkit-box-shadow: -1px 2px 19px 2px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: -1px 2px 19px 2px rgba(0, 0, 0, 0.65);
+  box-shadow: -1px 2px 19px 2px rgba(0, 0, 0, 0.65);
 }
 
-#logo{
+#logo {
   height: 200px;
   width: 200px;
 }
 
-nav img{
+nav img {
   padding: 5px;
-
 }
 
-#navbarNavAltMarkup{
+#navbarNavAltMarkup {
   justify-content: flex-end;
+}
+
+.card {
+  margin: 10px;
+  margin-left: 1px;
+  -webkit-box-shadow: -1px 0px 16px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 16px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 16px;
+}
+
+.col-sm-6 {
+  -ms-flex: 0 0 50%;
+  flex: 10 10 10%;
+  max-width: 50%;
+  align-items: stretch;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.card-img-top:before {
+  content: " ";
+  display: block;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  background-image: url("../images/intervention.jpg");
+}
+
+#btn_next {
+  width: 30vh;
+  justify-content: flex-start;
+  float: left;
 }

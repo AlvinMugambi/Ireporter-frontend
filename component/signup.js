@@ -89,36 +89,6 @@ class Signup extends React.Component{
 
 
       }
-      else if (json.first_name) {
-        try {
-          var error = document.getElementById("First-name-error")
-          error.innerHTML = json.first_name[0]
-          error.style.color = "red"
-        } catch (e) {
-          console.log(e);
-        }
-
-      }
-      else if (json.last_name) {
-        try {
-          var error = document.getElementById("last-name-error")
-          error.innerHTML = json.last_name[0]
-          error.style.color = "red"
-        } catch (e) {
-          console.log(e);
-        }
-
-      }
-      else if (json.other_name) {
-        try {
-          var error = document.getElementById("other-name-error")
-          error.innerHTML = json.other_name[0]
-          error.style.color = "red"
-        } catch (e) {
-          console.log(e);
-        }
-
-      }
       else if (json.username) {
         try {
           var error = document.getElementById("username-error")
@@ -179,19 +149,19 @@ class Signup extends React.Component{
 
             <Form.Group controlId="formBasicEmail">
               <Form.Label>First Name</Form.Label>
-              <Form.Control type="name" placeholder="Enter first name" id="first_name" onChange = { this.handleChange }/>
+              <Form.Control type="name" placeholder="Enter first name" id="first_name" onChange = { this.handleChange } required/>
               <p id="First-name-error"></p>
             </Form.Group>
 
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Last Name</Form.Label>
-              <Form.Control type="name" placeholder="Enter last name" id="last_name" onChange = { this.handleChange }/>
+              <Form.Control type="name" placeholder="Enter last name" id="last_name" onChange = { this.handleChange } required/>
               <p id="last-name-error"></p>
             </Form.Group>
 
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Other Name</Form.Label>
-              <Form.Control type="name" placeholder="Enter other name" id="other_name" onChange = { this.handleChange }/>
+              <Form.Control type="name" placeholder="Enter other name" id="other_name" onChange = { this.handleChange } required/>
               <p id="other-name-error"></p>
             </Form.Group>
 
